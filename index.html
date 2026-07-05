@@ -8,13 +8,14 @@
         <link href="styles.css" rel="stylesheet">
         <title>MessyPrincy</title>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <nav id="my-navbar" class="navbar fixed-top navbar-expand-md navbar-dark">
                 <div class="container">
 
-                    <img src="/logo.png" alt="MessyPrincy.Dev" class="rounded-3" style="height: 40px; width: auto;">
+                    <a href="https://github.com/MessyPrincy"><img id="logo" src="/logo.png" alt="MessyPrincy.Dev" class="rounded-3"></a>
 
                     <div id="nav-center" class="navbar-nav d-flex flex-row gap-4 justify-content-center">
                         <a class="nav-link" href="#home">Home</a>
@@ -23,19 +24,23 @@
                     </div>
 
                     <div class="navbar-nav d-flex flex-row justify-content-end">
-                        <span id="theme-toggle" class="nav-link" style="cursor: pointer; padding-right: 0;">🌙</span>
+                        <span id="theme-toggle">🌙</span>
                     </div>
                 </div>
             </nav>
         </header>
         <main>
-            <section id="home" class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+            <section id="home" class="d-flex align-items-center justify-content-center">
+                <div class="text-center">
+                    <h1 id="title">MessyPrincy.dev</h1>
+                    <p id="about-me">I'm just a <span id="profession">programmer</span> who loves to solve problems</p>
+                    <p id="about-me">I love to code, write stories & enjoy music</p>
+                </div>
+            </section>
+            <section id="about" class="d-flex align-items-center justify-content-center">
 
             </section>
-            <section id="about" class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
-
-            </section>
-            <section id="projects" class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+            <section id="projects" class="d-flex align-items-center justify-content-center">
 
             </section>
         </main>

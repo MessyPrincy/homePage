@@ -1,3 +1,15 @@
+*, *:before, *:after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100;
+}
+
 html, body {
   height: auto;
   min-height: 100%;
@@ -13,9 +25,6 @@ html
 body
 {
     position: relative;
-
-    padding-top: 75px;
-
     background: #07b3aa;
     background: linear-gradient(60deg, rgba(7, 179, 170, 1) 0%, rgba(9, 74, 121, 1) 35%, rgba(156, 19, 126, 1) 100%);
 }
@@ -50,6 +59,11 @@ body.light-mode .navbar-dark .nav-link
     color: #212529 !important;
 }
 
+body.light-mode main
+{
+    filter: brightness(0.5);
+}
+
 #my-navbar
 {
     background-color: rgba(33, 37, 41, 0.45) !important;
@@ -62,10 +76,17 @@ body.light-mode .navbar-dark .nav-link
     transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
+
 body.light-mode #my-navbar
 {
     background-color: rgba(255, 255, 255, 0.45) !important;
     border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+#logo
+{
+    height: 40px;
+    width: auto;
 }
 
 #nav-center
@@ -73,18 +94,9 @@ body.light-mode #my-navbar
     font-family: 'Orbitron', sans-serif;
 }
 
-#title
+.nav-link:hover
 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background: linear-gradient(to right, #00fff2, #ff4fd8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 1px;
-    border-bottom: 3px solid;
-    border-image: linear-gradient(to right, #00fff2, #ff4fd8) 1;
-    display: inline-block;
+    text-decoration: underline;
 }
 
 #theme-toggle
@@ -92,4 +104,39 @@ body.light-mode #my-navbar
     background-color: transparent;
     border: none;
     font-size: 25px;
+    cursor: pointer;
 }
+
+section
+{
+    min-height: 100vh;
+}
+
+#title
+{
+    font-family: 'Geist Pixel', sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: #DBD3D3;
+    cursor: pointer;
+}
+
+#profession:after
+{
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink
+{
+    0%, 50% {opacity: 1;}
+    51%, 100% {opacity: 0;}
+}
+
+#about-me
+{
+    font-family: 'Geist Pixel', sans-serif;
+    font-size: 20px;
+    color: #A19C9C;
+}
+
