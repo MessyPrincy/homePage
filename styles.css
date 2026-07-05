@@ -1,3 +1,8 @@
+html, body {
+  height: auto;
+  min-height: 100%;
+}
+
 html
 {
     scroll-behavior: smooth;
@@ -7,16 +12,17 @@ html
 
 body
 {
+    position: relative;
+
     padding-top: 75px;
 
     background: #07b3aa;
     background: linear-gradient(60deg, rgba(7, 179, 170, 1) 0%, rgba(9, 74, 121, 1) 35%, rgba(156, 19, 126, 1) 100%);
-    background-attachment: fixed;
 }
 
 body::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -48,7 +54,7 @@ body.light-mode .navbar-dark .nav-link
 {
     background-color: rgba(33, 37, 41, 0.45) !important;
 
-    backdrop-filter: blue(12px);
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
     border-bottom: 1px solid grey;
