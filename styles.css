@@ -66,6 +66,7 @@ body.light-mode main
 
 #my-navbar
 {
+    font-size: 1.25vw;
     background-color: rgba(33, 37, 41, 0.45) !important;
 
     backdrop-filter: blur(12px);
@@ -85,7 +86,7 @@ body.light-mode #my-navbar
 
 #logo
 {
-    height: 40px;
+    height: 50px;
     width: auto;
 }
 
