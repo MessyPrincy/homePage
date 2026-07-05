@@ -1,0 +1,89 @@
+html
+{
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 80px;
+}
+
+body
+{
+    padding-top: 75px;
+
+    background: #07b3aa;
+    background: linear-gradient(60deg, rgba(7, 179, 170, 1) 0%, rgba(9, 74, 121, 1) 35%, rgba(156, 19, 126, 1) 100%);
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: #00fff2;
+    background: linear-gradient(60deg, rgba(0, 255, 242, 1) 0%, rgba(107, 193, 255, 1) 32%, rgba(220, 175, 250, 1) 66%, rgba(255, 0, 200, 1) 100%);
+    background-repeat: no-repeat;
+
+
+    opacity: 0;
+    z-index: -1;
+
+
+    transition: opacity 0.5s ease;
+}
+
+body.light-mode::before {
+    opacity: 1;
+}
+
+body.light-mode .navbar-dark .navbar-brand,
+body.light-mode .navbar-dark .nav-link
+{
+    color: #212529 !important;
+}
+
+#my-navbar
+{
+    background-color: rgba(33, 37, 41, 0.45) !important;
+
+    backdrop-filter: blue(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid grey;
+
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+body.light-mode #my-navbar
+{
+    background-color: rgba(255, 255, 255, 0.45) !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+#nav-center
+{
+    font-family: 'Orbitron', sans-serif;
+}
+
+#title
+{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #00fff2, #ff4fd8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 1px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, #00fff2, #ff4fd8) 1;
+    display: inline-block;
+}
+
+#theme-toggle
+{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}
