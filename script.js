@@ -4,7 +4,7 @@ const profession = document.getElementById("profession");
 
 
 const titles = ["MessyPrincy.dev", "MessyPrincy", "Messy", "Meßy", "3999"];
-const professions = ["programmer", "gamer", "writer", "coder"];
+const professions = ["developer", "self-taught coder", "gamer", "writer"];
 let titleCurrentIndex = 0;
 let professionCurrentIndex = 0;
 let isTitleAnimating = false;
