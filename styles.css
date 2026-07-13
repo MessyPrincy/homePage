@@ -1,3 +1,10 @@
+:root {
+    --text-main: #DBD3D3;
+    --text-sub: #A19C9C;
+    --terminal-bg: rgba(33, 37, 41, 0.35);
+    --terminal-border: 1px solid grey;
+}
+
 *, *:before, *:after
 {
     box-sizing: border-box;
@@ -59,9 +66,11 @@ body.light-mode .navbar-dark .nav-link
     color: #212529 !important;
 }
 
-body.light-mode main
-{
-    filter: brightness(0.5);
+body.light-mode {
+    --text-main: #333333;
+    --text-sub: #666666;
+    --terminal-bg: rgba(255, 255, 255, 0.15);
+    --terminal-border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #my-navbar
@@ -118,7 +127,7 @@ section
     font-family: 'Geist Pixel', sans-serif;
     font-weight: bold;
     font-size: 70px;
-    color: #DBD3D3;
+    color: var(--text-main);
     cursor: pointer;
 }
 
@@ -138,6 +147,48 @@ section
 {
     font-family: 'Geist Pixel', sans-serif;
     font-size: 20px;
-    color: #A19C9C;
+    color: var(--text-sub);
+}
+
+#custom-terminal
+{
+    border: var(--terminal-border);
+    background-color: var(--terminal-bg);
+    color: var(--text-sub);
+    font-family: monospace;
+}
+
+#about-me-header
+{
+    font-family: 'Geist Pixel', sans-serif;
+    color: var(--text-main);
+}
+
+
+#terminal-body pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
+}
+
+#terminal-title
+{
+    color: var(--text-main);
+    font-size: 12px;
+}
+
+.terminal-text
+{
+    color: var(--text-sub);
+    font-size: 20px;
+}
+
+.terminal-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-sub);
+    flex-grow: 1;
 }
 
