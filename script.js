@@ -74,7 +74,6 @@ function createInputLine() {
   terminalBody.appendChild(wrapper);
 
   const input = wrapper.querySelector('.terminal-input');
-  input.focus();
   input.addEventListener('keydown', handleKeydown);
   return input;
 }
