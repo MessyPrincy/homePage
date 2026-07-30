@@ -14,7 +14,7 @@ const responses = {
     about: `Hi, I'm Messy; a self-taught developer who enriches his skills through passion projects, work in online communities, and building hands-on solutions to real-world problems.`,
     skills: `    [Frontend]: HTML, CSS, Bootstrap
     [Backend]: Flask, SQLite, MariaDB, MySQL, Python
-    [Other Skills]: Java, C, Linux, Git, API`,
+    [Other Skills]: Java, C, Linux, Git, APIs`,
     github: `Check out my work: https://github.com/MessyPrincy`
 };
 let titleCurrentIndex = 0;
