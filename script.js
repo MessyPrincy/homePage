@@ -8,9 +8,9 @@ const titles = ["MessyPrincy.dev", "MessyPrincy", "Messy", "Meßy", "3999"];
 const professions = ["developer", "self-taught coder", "gamer", "writer"];
 const responses = {
     help: `Commands:
-    - about
-    - skills
-    - github`,
+    - <span class="command-link" data-command="about">about</span>
+    - <span class="command-link" data-command="skills">skills</span>
+    - <span class="command-link" data-command="github">github</span>`,
     about: `Hi, I'm Messy; a self-taught developer who enriches his skills through passion projects, work in online communities, and building hands-on solutions to real-world problems.`,
     skills: `    [Frontend]: HTML, CSS, Bootstrap
     [Backend]: Flask, SQLite, MariaDB, MySQL, Python
@@ -25,7 +25,6 @@ let isProfessionAnimating = false;
 themeToggle.addEventListener("click", function() {
     document.body.classList.toggle("light-mode");
 
-
     if (document.body.classList.contains("light-mode")) {
         themeToggle.textContent = "☀️";
     } else {
@@ -36,9 +35,7 @@ themeToggle.addEventListener("click", function() {
 function eraseText(element, speed = 30) {
     return new Promise((resolve) => {
         const text = element.textContent;
-
         let i = text.length;
-
         const interval = setInterval(() => {
             element.textContent = text.substring(0, i - 1);
             i--;
@@ -53,9 +50,7 @@ function eraseText(element, speed = 30) {
 function writeText(element, text, speed = 60) {
     return new Promise((resolve) => {
         element.textContent = "";
-
         let i = 0;
-
         const interval = setInterval(() => {
             element.textContent += text.charAt(i);
             i++;
@@ -84,24 +79,21 @@ function createInputLine() {
   return input;
 }
 
-function handleKeydown(event) {
-  if (event.key !== 'Enter') return;
+function runCommand(rawCommand) {
+  const command = rawCommand.trim().toLowerCase();
 
-  const input = event.target;
-  const rawCommand = input.value.trim();
-  const command = rawCommand.toLowerCase();
-
-  input.disabled = true;
+  const liveInput = terminalBody.querySelector('.terminal-input:not([disabled])');
+  if (liveInput) liveInput.disabled = true;
 
   if (command === 'clear') {
     terminalBody.innerHTML = '';
-  } else if (rawCommand !== '') {
+  } else if (command !== '') {
     const outputWrapper = document.createElement('div');
     outputWrapper.className = 'text-start p-2 terminal-text';
 
     if (responses[command]) {
       const pre = document.createElement('pre');
-      pre.textContent = responses[command];
+      pre.innerHTML = responses[command];
       outputWrapper.appendChild(pre);
     } else {
       const p = document.createElement('p');
@@ -115,6 +107,17 @@ function handleKeydown(event) {
   createInputLine();
   terminalBody.scrollTop = terminalBody.scrollHeight;
 }
+
+function handleKeydown(event) {
+  if (event.key !== 'Enter') return;
+  runCommand(event.target.value);
+}
+
+document.addEventListener('click', function(event) {
+  const link = event.target.closest('[data-command]');
+  if (!link) return;
+  runCommand(link.dataset.command);
+});
 
 async function cycleProfessions(pauseMs = 1500) {
     while (true) {
@@ -136,8 +139,6 @@ title.addEventListener("click", async function() {
 
     isTitleAnimating = false;
 });
-
-
 
 cycleProfessions();
 createInputLine();

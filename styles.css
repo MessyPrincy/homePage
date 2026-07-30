@@ -192,3 +192,9 @@ section
     flex-grow: 1;
 }
 
+.command-link {
+  cursor: pointer;
+}
+.command-link:hover {
+  opacity: 0.8;
+}
