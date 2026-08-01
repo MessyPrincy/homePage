@@ -10,12 +10,14 @@ const responses = {
     help: `Commands:
     - <span class="command-link" data-command="about">about</span>
     - <span class="command-link" data-command="skills">skills</span>
-    - <span class="command-link" data-command="github">github</span>`,
+    - <span class="command-link" data-command="github">github</span>
+    - <span class="command-link" data-command="organization">organization</span>`,
     about: `Hi, I'm Messy; a self-taught developer who enriches his skills through passion projects, work in online communities, and building hands-on solutions to real-world problems.`,
     skills: `    [Frontend]: HTML, CSS, Bootstrap
     [Backend]: Flask, SQLite, MariaDB, MySQL, Python
-    [Other Skills]: Java, C, Linux, Git, APIs`,
-    github: `Check out my work: https://github.com/MessyPrincy`
+    [Other Skills]: Java, C, Linux, Git, APIs, Work Environment that utilized Kanban`,
+    github: `Check out my work: https://github.com/MessyPrincy`,
+    organization: `Experiences with working in teams, such as https://github.com/DougDougDevDev`
 };
 let titleCurrentIndex = 0;
 let professionCurrentIndex = 0;
