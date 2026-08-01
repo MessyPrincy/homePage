@@ -3,6 +3,7 @@
     --text-sub: #A19C9C;
     --terminal-bg: rgba(33, 37, 41, 0.35);
     --terminal-border: 1px solid grey;
+    --project-box: linear-gradient(135deg, #2b2d42 50%, #1a1a2e 50%);
 }
 
 *, *:before, *:after
@@ -71,6 +72,7 @@ body.light-mode {
     --text-sub: #666666;
     --terminal-bg: rgba(255, 255, 255, 0.15);
     --terminal-border: 1px solid rgba(0, 0, 0, 0.1);
+    --project-box: linear-gradient(135deg, #9194E6 50%, #54549C 50%)
 }
 
 #my-navbar
@@ -184,7 +186,8 @@ section
     font-size: 20px;
 }
 
-.terminal-input {
+.terminal-input 
+{
     background: transparent;
     border: none;
     outline: none;
@@ -192,9 +195,40 @@ section
     flex-grow: 1;
 }
 
-.command-link {
+.command-link 
+{
   cursor: pointer;
 }
-.command-link:hover {
+.command-link:hover 
+{
   opacity: 0.8;
+}
+
+.project-box
+{
+    border: var(--terminal-border);
+    background: var(--project-box);
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+.project-box:hover
+{
+    top: -10px;
+}
+
+.project-header 
+{
+    color: var(--text-main);
+    font-family: monospace;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.project-body
+{
+    color: var(--text-main);
+    font-family: monospace;
+    font-size: 20px;
 }
