@@ -184,6 +184,19 @@ section
 {
     color: var(--text-sub);
     font-size: 20px;
+    text-decoration-line: none;
+}
+
+.terminal-a
+{
+    color: var(--text-sub);
+    font-size: 18px;
+    text-decoration-line: none;
+}
+
+.terminal-a:hover
+{
+    opacity: 0.8;
 }
 
 .terminal-input 
