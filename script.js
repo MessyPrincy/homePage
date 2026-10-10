@@ -15,7 +15,7 @@ const responses = {
     about: `Hi, I'm Messy; a self-taught developer who enriches his skills through passion projects, work in online communities, and building hands-on solutions to real-world problems.`,
     skills: `    [Frontend]: HTML, CSS, Bootstrap
     [Backend]: Flask, SQLite, MariaDB, MySQL, Python
-    [Other Skills]: Java, C, Linux, Git, APIs, Work Environment that utilized Kanban`,
+    [Other Skills]: Java, C, Linux, Git, APIs, Kanban Boards`,
     github: `Check out my work: <a class="terminal-a" href="https://github.com/MessyPrincy">https://github.com/MessyPrincy</a>`,
     organization: `Experiences with working in teams, such as <a class="terminal-a" href="https://github.com/DougDougDevDev">https://github.com/DougDougDevDev</a>`
 };
